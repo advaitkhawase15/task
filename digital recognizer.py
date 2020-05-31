@@ -52,6 +52,11 @@ model.add(Convolution2D(filters=32,
                         activation='relu',
                         input_shape=(28,28,1)))
 model.add(MaxPooling2D(pool_size=(4,4)))
+model.add(Convolution2D(filters=32,
+			kernel_size=(4,4),
+			activation='relu',
+			input_shape=(28,28,1))
+model.add(MaxPooling2D(pool_size=(2,2)))
 model.add(Flatten())
 model.add(Dense(units=40,
                 activation='relu'))
